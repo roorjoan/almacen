@@ -1,0 +1,13 @@
+body {
+    font-size: 10px;
+    font-family: "Roboto Mono", monospace;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.btn {
+    border-radius: 40px;
+}

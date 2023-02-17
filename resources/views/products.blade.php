@@ -4,7 +4,15 @@
 
 @section('content')
 
-    <h1 class="mb-3 text-center">{{ $msg }} - <strong class="text-success">{{ $total }}</strong></h1>
+    <div>
+        <h1 class="mb-3 text-center">
+            <a class="me-2 text-danger" style="text-decoration: none" href="{{ route('home') }}">
+                <- </a>
+                    {{ $msg }} -
+                    <strong class="text-success">{{ $total }}</strong>
+        </h1>
+    </div>
+
     <table id="myDataTable" class="table">
         <thead>
             <tr>

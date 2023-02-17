@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::view('/', 'home')->name('home');
+
 Route::get('/products', [ProductController::class, 'index'])->name('products.all');
 Route::get('/products/actives', [ProductController::class, 'allActives'])->name('products.actives');
 Route::get('/products/upto20', [ProductController::class, 'upTo20'])->name('products.upto20');
