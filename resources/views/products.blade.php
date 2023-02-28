@@ -21,6 +21,7 @@
                 <th scope="col">description</th>
                 <th scope="col">price</th>
                 <th scope="col">existence</th>
+                <th scope="col">category</th>
                 <th scope="col">active</th>
                 <th scope="col">created_at</th>
                 <th scope="col">updated_at</th>
@@ -35,6 +36,7 @@
                     <td>{{ $product->description }}</td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->existence }}</td>
+                    <td>{{ $product->category->name }}</td>
                     <td>{{ $product->active }}</td>
                     <td>{{ $product->created_at }}</td>
                     <td>{{ $product->updated_at }}</td>

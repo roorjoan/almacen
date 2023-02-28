@@ -11,16 +11,7 @@ class ProductController extends Controller
     {
         $msg = 'All products';
 
-        $products = Product::select([
-            'id',
-            'code',
-            'description',
-            'price',
-            'existence',
-            'active',
-            'created_at',
-            'updated_at'
-        ])->get();
+        $products = Product::all();
 
         $total = $products->count();
         return view('products', compact('msg', 'products', 'total'));
