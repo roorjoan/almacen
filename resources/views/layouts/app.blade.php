@@ -7,18 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Almacen - @yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('datatables/jquery.dataTables.min.css') }}">
+    <style>
+        body {
+            font-size: 1rem !important;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container my-3">
         @yield('content')
     </div>
-
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('datatables/jqueryv3.6.1.min.js') }}"></script>
-    <script src="{{ asset('datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

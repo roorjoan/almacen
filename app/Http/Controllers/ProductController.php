@@ -11,9 +11,10 @@ class ProductController extends Controller
     {
         $msg = 'All products';
 
-        $products = Product::all();
+        //$products = Product::all();
+        $products = Product::paginate(10);
 
-        $total = $products->count();
+        $total = Product::count();
         return view('products', compact('msg', 'products', 'total'));
     }
 

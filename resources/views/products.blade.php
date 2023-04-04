@@ -13,7 +13,7 @@
         </h1>
     </div>
 
-    <table id="myDataTable" class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th scope="col">id</th>
@@ -28,8 +28,7 @@
             </tr>
         </thead>
         <tbody>
-
-            @foreach ($products as $product)
+            @forelse ($products as $product)
                 <tr>
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->code }}</td>
@@ -41,9 +40,12 @@
                     <td>{{ $product->created_at }}</td>
                     <td>{{ $product->updated_at }}</td>
                 </tr>
-            @endforeach
-
+            @empty
+                <p class="text-danger">No data.</p>
+            @endforelse
         </tbody>
     </table>
+    <!--to see pagination buttons-->
+    <!--blade directive $products->links()-->
 
 @endsection
